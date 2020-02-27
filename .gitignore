@@ -1,3 +1,4 @@
 *.ftpconfig
 *.zip
 *.ipynb_checkpoints
+aux

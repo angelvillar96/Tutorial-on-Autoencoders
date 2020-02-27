@@ -1,5 +1,5 @@
 """
-Autoencoders/models/visualizations.py
+Autoencoders/models/dense_autoencoders.py
 
 This file contains different autoencoder architectures based solely on fully-connected layers
 """
@@ -8,7 +8,7 @@ import numpy as np
 
 import keras.backend as K
 from keras.datasets import mnist
-from keras.layers import Input, Dense, GaussianNoise, Flatten, Reshape, Lambda
+from keras.layers import Input, Dense, Flatten, Reshape
 from keras.models import Model
 from keras.optimizers import Adam
 
@@ -55,7 +55,4 @@ def shallow_fully_connected_autoencoder(bottleneck_dim=2, layer_size=100, loss="
     return autoencoder, encoder
 
 
-
-# # displayinng the latent space
-# coded_imgs = encoder.predict(x_test)
-# plot_latent(coded_imgs, y_test)
+#

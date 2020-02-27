@@ -16,3 +16,28 @@ def load_mnist_dataset():
     x_test = x_test.astype('float32') / 255
 
     return (x_train, y_train), (x_test, y_test)
+
+
+def prepare_mnist_for_conv(x_train, x_test):
+    """
+    Reshapes the data from MNIST train and test sets to be fed into a convolutional
+    neural network
+
+    Args:
+    -----
+    x_train: np array
+        original images from the MNIST train set
+    x_test: np array
+        original images from the MNIST test set
+    Returns:
+    --------
+    x_train: np array
+        reshaped images from the MNIST train set
+    x_test: np array
+        reshaped images from the MNIST test set
+    """
+
+    x_train = x_train.reshape(x_train.shape[0], 28, 28, 1)
+    x_test = x_test.reshape(x_test.shape[0], 28, 28, 1)
+
+    return x_train, x_test

@@ -11,7 +11,6 @@ from mpl_toolkits import mplot3d
 from matplotlib.colors import ListedColormap
 
 
-
 def display_original_and_decoded_imgs(img_original, img_decoded, n_images, idx=None, title=""):
     """
     Displaying original input images and the same images after being encoded and decoded
@@ -59,3 +58,22 @@ def plot_latent(points, label, dim=3, figsize=(10,6), title=""):
     cb.set_ticklabels(cb_labels)
 
     plt.show()
+
+
+def loss_over_epochs(training_loss, validation_loss, xlabel="Epoch", ylabel="Loss (MSE)"):
+    """
+    Creating a graph displaying the evoluition of training and validation loss over epochs
+    """
+
+    plt.figure(figsize=(10,5))
+    plt.plot(training_loss, label="training loss")
+    plt.plot(validation_loss, label="validation loss")
+    plt.legend(loc="best")
+    plt.ylabel(ylabel)
+    plt.xlabel(xlabel)
+
+    pos = np.round(np.linspace(0,len(training_loss),5)).astype(int)
+    plt.xticks(pos, pos+1)
+    plt.show()
+
+    return
