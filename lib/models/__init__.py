@@ -1,3 +1,3 @@
 
 from .dense_autoencoders import shallow_fully_connected_autoencoder
-from .conv_autoencoders import basic_conv_autoencoder
+from .conv_autoencoders import basic_conv_autoencoder, ciphar_conv_autoencoder

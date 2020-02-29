@@ -4,7 +4,7 @@ Autoencoders/data_handler/data_loaders.py
 This file contains different methods to load, handle and preprocess the data
 """
 
-from keras.datasets import mnist
+from keras.datasets import mnist, cifar10
 
 def load_mnist_dataset():
     """
@@ -41,3 +41,13 @@ def prepare_mnist_for_conv(x_train, x_test):
     x_test = x_test.reshape(x_test.shape[0], 28, 28, 1)
 
     return x_train, x_test
+
+
+def load_ciphar_data():
+    """
+    Loading train and test sets of the CIFAR-10 dataset
+    """
+
+    (x_train, y_train), (x_test, y_test) = cifar10.load_data()
+
+    return (x_train, y_train), (x_test, y_test)
