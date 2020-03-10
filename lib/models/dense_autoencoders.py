@@ -24,12 +24,14 @@ def shallow_fully_connected_autoencoder(bottleneck_dim=2, layer_size=100, loss="
         dimensionality of the latent space representation
     layer_size: integer
         dimensionality of the hidden layer
+    loss: string
+        reconstruction loss function to use (binary_crossentropy, mse, ...)
 
     Returns:
     --------
     autoencoder: Model
         model corresponding to the autoencoder
-    autoencoder: Model
+    encoder: Model
         encoder part of the autoencoder
     """
 
