@@ -1,7 +1,7 @@
 """
-Autoencoders/models/visualizations.py
+Autoencoders/models/conv_autoencoders.py
 
-This file contains different autoencoder architectures based solely on fully-connected layers
+This file contains different autoencoder architectures using convolutional layers
 """
 
 import numpy as np
