@@ -14,6 +14,19 @@ from matplotlib.colors import ListedColormap
 def display_original_and_decoded_imgs(img_original, img_decoded, n_images, idx=None, title=""):
     """
     Displaying original input images and the same images after being encoded and decoded
+
+    Args:
+    -----
+    img_original: numpy array
+        array containing several images from the dataset
+    img_decoded: numpy array
+        array containing several images output by the Autoencoder model
+    n_images: integer
+        number of images to display
+    idx: list/array
+        indices of the images to display. If None, indicides are sampled randomly
+    title: string
+        string to title the figure
     """
 
     if(idx==None):

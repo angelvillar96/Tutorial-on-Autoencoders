@@ -2,3 +2,5 @@
 *.zip
 *.ipynb_checkpoints
 aux
+Literature
+__pycache__
